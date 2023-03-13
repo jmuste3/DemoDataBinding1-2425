@@ -8,18 +8,26 @@ namespace DemoDataBinding1
             //dades exemple 2
             Llibre llibre1 = new Llibre("El Quixot", "Miguel de Cervantes", 1605, false);
             Llibre llibre2 = new Llibre("Mecanoscrit del segon origen", "Manuel de Pedrolo", 1974, false);
-            Llibre llibre3 = new Llibre("1983", "George Orwell", 1949, true);
+            Llibre llibre3 = new Llibre("1984", "George Orwell", 1949, true);
+
+            //afegir els llibres a la llista "llibres"
             List<Llibre> llibres= new List<Llibre>();
             llibres.Add(llibre1);
             llibres.Add(llibre2);
             llibres.Add(llibre3);
+
+
             //binding exemple 2
             BindingSource comboBindingSource = new BindingSource();
             comboBindingSource.DataSource= llibres;
+            //combobox
             comboBoxLlibre.DataSource= comboBindingSource;
             comboBoxLlibre.DisplayMember= "Titol";
+            //
             textBoxAutor.DataBindings.Add("Text", comboBindingSource, "Autor");
+            //
             textBoxAny.DataBindings.Add("Text", comboBindingSource, "Any");
+            //
             checkBoxPrestat.DataBindings.Add("Checked", comboBindingSource, "Prestat");
 
 

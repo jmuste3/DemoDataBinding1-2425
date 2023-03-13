@@ -22,5 +22,6 @@ namespace DemoDataBinding1
             Any = any;
             Prestat = prestat;
         }
+
     }
 }
