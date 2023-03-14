@@ -40,9 +40,24 @@
             this.textBoxAny = new System.Windows.Forms.TextBox();
             this.textBoxAutor = new System.Windows.Forms.TextBox();
             this.comboBoxLlibre = new System.Windows.Forms.ComboBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.labelError = new System.Windows.Forms.Label();
+            this.buttonEsborrar = new System.Windows.Forms.Button();
+            this.buttonAfegir = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxTitol2 = new System.Windows.Forms.TextBox();
+            this.grid = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBoxPrestat2 = new System.Windows.Forms.CheckBox();
+            this.textBoxAny2 = new System.Windows.Forms.TextBox();
+            this.textBoxAutor2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -69,10 +84,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(483, 245);
+            this.tabControl1.Size = new System.Drawing.Size(585, 392);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -82,7 +98,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(475, 217);
+            this.tabPage1.Size = new System.Drawing.Size(577, 364);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Databinding";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -99,7 +115,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(475, 217);
+            this.tabPage2.Size = new System.Drawing.Size(577, 364);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "List";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -163,11 +179,139 @@
             this.comboBoxLlibre.Size = new System.Drawing.Size(199, 23);
             this.comboBoxLlibre.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.labelError);
+            this.tabPage3.Controls.Add(this.buttonEsborrar);
+            this.tabPage3.Controls.Add(this.buttonAfegir);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.textBoxTitol2);
+            this.tabPage3.Controls.Add(this.grid);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.checkBoxPrestat2);
+            this.tabPage3.Controls.Add(this.textBoxAny2);
+            this.tabPage3.Controls.Add(this.textBoxAutor2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(577, 364);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "grid";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(400, 255);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(147, 15);
+            this.labelError.TabIndex = 20;
+            this.labelError.Text = "Has de seleccionar una fila";
+            // 
+            // buttonEsborrar
+            // 
+            this.buttonEsborrar.Location = new System.Drawing.Point(319, 251);
+            this.buttonEsborrar.Name = "buttonEsborrar";
+            this.buttonEsborrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEsborrar.TabIndex = 19;
+            this.buttonEsborrar.Text = "esborrar";
+            this.buttonEsborrar.UseVisualStyleBackColor = true;
+            this.buttonEsborrar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonAfegir
+            // 
+            this.buttonAfegir.Location = new System.Drawing.Point(319, 208);
+            this.buttonAfegir.Name = "buttonAfegir";
+            this.buttonAfegir.Size = new System.Drawing.Size(75, 23);
+            this.buttonAfegir.TabIndex = 18;
+            this.buttonAfegir.Text = "afegir";
+            this.buttonAfegir.UseVisualStyleBackColor = true;
+            this.buttonAfegir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 15);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Biblioteca";
+            // 
+            // textBoxTitol2
+            // 
+            this.textBoxTitol2.Location = new System.Drawing.Point(17, 208);
+            this.textBoxTitol2.Name = "textBoxTitol2";
+            this.textBoxTitol2.Size = new System.Drawing.Size(221, 23);
+            this.textBoxTitol2.TabIndex = 16;
+            // 
+            // grid
+            // 
+            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid.Location = new System.Drawing.Point(8, 31);
+            this.grid.Name = "grid";
+            this.grid.RowTemplate.Height = 25;
+            this.grid.Size = new System.Drawing.Size(560, 150);
+            this.grid.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 280);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 15);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Any";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 15);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Autor";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 15);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Titol";
+            // 
+            // checkBoxPrestat2
+            // 
+            this.checkBoxPrestat2.AutoSize = true;
+            this.checkBoxPrestat2.Location = new System.Drawing.Point(17, 337);
+            this.checkBoxPrestat2.Name = "checkBoxPrestat2";
+            this.checkBoxPrestat2.Size = new System.Drawing.Size(62, 19);
+            this.checkBoxPrestat2.TabIndex = 11;
+            this.checkBoxPrestat2.Text = "prestat";
+            this.checkBoxPrestat2.UseVisualStyleBackColor = true;
+            // 
+            // textBoxAny2
+            // 
+            this.textBoxAny2.Location = new System.Drawing.Point(16, 298);
+            this.textBoxAny2.Name = "textBoxAny2";
+            this.textBoxAny2.Size = new System.Drawing.Size(91, 23);
+            this.textBoxAny2.TabIndex = 10;
+            // 
+            // textBoxAutor2
+            // 
+            this.textBoxAutor2.Location = new System.Drawing.Point(16, 252);
+            this.textBoxAutor2.Name = "textBoxAutor2";
+            this.textBoxAutor2.Size = new System.Drawing.Size(221, 23);
+            this.textBoxAutor2.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 237);
+            this.ClientSize = new System.Drawing.Size(584, 384);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -177,6 +321,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +342,18 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private TabPage tabPage3;
+        private Label label8;
+        private TextBox textBoxTitol2;
+        private DataGridView grid;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private CheckBox checkBoxPrestat2;
+        private TextBox textBoxAny2;
+        private TextBox textBoxAutor2;
+        private Button buttonEsborrar;
+        private Button buttonAfegir;
+        private Label labelError;
     }
 }
