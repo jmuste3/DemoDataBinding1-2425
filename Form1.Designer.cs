@@ -41,6 +41,7 @@
             this.textBoxAutor = new System.Windows.Forms.TextBox();
             this.comboBoxLlibre = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonAjuda = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
             this.buttonEsborrar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
@@ -182,6 +183,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.buttonAjuda);
             this.tabPage3.Controls.Add(this.labelError);
             this.tabPage3.Controls.Add(this.buttonEsborrar);
             this.tabPage3.Controls.Add(this.buttonAfegir);
@@ -202,6 +204,15 @@
             this.tabPage3.Text = "grid";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // buttonAjuda
+            // 
+            this.buttonAjuda.Location = new System.Drawing.Point(284, 298);
+            this.buttonAjuda.Name = "buttonAjuda";
+            this.buttonAjuda.Size = new System.Drawing.Size(110, 23);
+            this.buttonAjuda.TabIndex = 5;
+            this.buttonAjuda.Text = "ajuda";
+            this.buttonAjuda.UseVisualStyleBackColor = true;
+            // 
             // labelError
             // 
             this.labelError.AutoSize = true;
@@ -214,20 +225,20 @@
             // 
             // buttonEsborrar
             // 
-            this.buttonEsborrar.Location = new System.Drawing.Point(319, 251);
+            this.buttonEsborrar.Location = new System.Drawing.Point(284, 251);
             this.buttonEsborrar.Name = "buttonEsborrar";
-            this.buttonEsborrar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEsborrar.TabIndex = 19;
+            this.buttonEsborrar.Size = new System.Drawing.Size(110, 23);
+            this.buttonEsborrar.TabIndex = 4;
             this.buttonEsborrar.Text = "esborrar";
             this.buttonEsborrar.UseVisualStyleBackColor = true;
             this.buttonEsborrar.Click += new System.EventHandler(this.buttonEsborrar_Click);
             // 
             // buttonAfegir
             // 
-            this.buttonAfegir.Location = new System.Drawing.Point(319, 208);
+            this.buttonAfegir.Location = new System.Drawing.Point(284, 208);
             this.buttonAfegir.Name = "buttonAfegir";
-            this.buttonAfegir.Size = new System.Drawing.Size(75, 23);
-            this.buttonAfegir.TabIndex = 18;
+            this.buttonAfegir.Size = new System.Drawing.Size(110, 23);
+            this.buttonAfegir.TabIndex = 3;
             this.buttonAfegir.Text = "afegir";
             this.buttonAfegir.UseVisualStyleBackColor = true;
             this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
@@ -246,7 +257,7 @@
             this.textBoxTitol2.Location = new System.Drawing.Point(17, 208);
             this.textBoxTitol2.Name = "textBoxTitol2";
             this.textBoxTitol2.Size = new System.Drawing.Size(221, 23);
-            this.textBoxTitol2.TabIndex = 16;
+            this.textBoxTitol2.TabIndex = 0;
             // 
             // grid
             // 
@@ -255,7 +266,7 @@
             this.grid.Name = "grid";
             this.grid.RowTemplate.Height = 25;
             this.grid.Size = new System.Drawing.Size(560, 150);
-            this.grid.TabIndex = 15;
+            this.grid.TabIndex = 2;
             // 
             // label5
             // 
@@ -299,14 +310,14 @@
             this.textBoxAny2.Location = new System.Drawing.Point(16, 298);
             this.textBoxAny2.Name = "textBoxAny2";
             this.textBoxAny2.Size = new System.Drawing.Size(91, 23);
-            this.textBoxAny2.TabIndex = 10;
+            this.textBoxAny2.TabIndex = 2;
             // 
             // textBoxAutor2
             // 
             this.textBoxAutor2.Location = new System.Drawing.Point(16, 252);
             this.textBoxAutor2.Name = "textBoxAutor2";
             this.textBoxAutor2.Size = new System.Drawing.Size(221, 23);
-            this.textBoxAutor2.TabIndex = 9;
+            this.textBoxAutor2.TabIndex = 1;
             // 
             // Form1
             // 
@@ -357,5 +368,6 @@
         private Button buttonEsborrar;
         private Button buttonAfegir;
         private Label labelError;
+        private Button buttonAjuda;
     }
 }

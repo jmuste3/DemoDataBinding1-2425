@@ -49,6 +49,12 @@ namespace DemoDataBinding1
             //ocultar msg error
             labelError.Visible = false;
 
+            //demo teclat
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(buttonAfegir, "Ctrl+F5");
+            tip.SetToolTip(buttonEsborrar, "Ctrl+F8");
+            //definir shortcut per botó ajuda = Ctrl + F12
+            //buttonAjuda.ShortcutKeys = Keys.Control | Keys.F12;
         }
 
         //exemple 3
