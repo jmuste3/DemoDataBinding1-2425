@@ -90,6 +90,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(585, 392);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControl1_KeyDown);
             // 
             // tabPage1
             // 
@@ -219,7 +220,7 @@
             this.buttonEsborrar.TabIndex = 19;
             this.buttonEsborrar.Text = "esborrar";
             this.buttonEsborrar.UseVisualStyleBackColor = true;
-            this.buttonEsborrar.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEsborrar.Click += new System.EventHandler(this.buttonEsborrar_Click);
             // 
             // buttonAfegir
             // 
@@ -229,7 +230,7 @@
             this.buttonAfegir.TabIndex = 18;
             this.buttonAfegir.Text = "afegir";
             this.buttonAfegir.UseVisualStyleBackColor = true;
-            this.buttonAfegir.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
             // 
             // label8
             // 
@@ -313,6 +314,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 384);
             this.Controls.Add(this.tabControl1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

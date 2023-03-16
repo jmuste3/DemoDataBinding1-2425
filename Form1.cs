@@ -24,15 +24,15 @@ namespace DemoDataBinding1
             //binding exemple 3
             bs = new BindingSource();
             bs.DataSource= llibres;
-            //combobox
-            comboBoxLlibre.DataSource= bs;
-            comboBoxLlibre.DisplayMember= "Titol";
-            //
-            textBoxAutor.DataBindings.Add("Text", bs, "Autor");
-            //
-            textBoxAny.DataBindings.Add("Text", bs, "Any");
-            //
-            checkBoxPrestat.DataBindings.Add("Checked", bs, "Prestat");
+            ////combobox
+            //comboBoxLlibre.DataSource= bs;
+            //comboBoxLlibre.DisplayMember= "Titol";
+            ////
+            //textBoxAutor.DataBindings.Add("Text", bs, "Autor");
+            ////
+            //textBoxAny.DataBindings.Add("Text", bs, "Any");
+            ////
+            //checkBoxPrestat.DataBindings.Add("Checked", bs, "Prestat");
 
             //binding exemple 3
             //datagridview
@@ -52,10 +52,10 @@ namespace DemoDataBinding1
         }
 
         //exemple 3
-        public BindingSource ComboBindingSource
-        {
-            get { return bs; }
-        }
+        //public BindingSource ComboBindingSource
+        //{
+        //    get { return bs; }
+        //}
 
     private void Form1_Load(object sender, EventArgs e)
         {
@@ -63,7 +63,7 @@ namespace DemoDataBinding1
             label1.DataBindings.Add("Text", textBox1, "Text");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAfegir_Click(object sender, EventArgs e)
         {
             //crear llibre en blanc
             Llibre llibreNou = new Llibre("", "", 0, false);
@@ -75,7 +75,7 @@ namespace DemoDataBinding1
         }
 
         //exemple 3
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonEsborrar_Click(object sender, EventArgs e)
         {
             // Comprova si hi ha alguna fila seleccionada
             if (grid.SelectedRows.Count > 0)
@@ -110,5 +110,40 @@ namespace DemoDataBinding1
         }
 
 
+        //no utilitzat - cal que el control tingui el focus
+        //i posar la propietat KeyPreview del From a true: this.KeyPreview = true;
+        //private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        //{
+        //    //gestionar combinació de tecles per Esborrar
+        //    if (e.KeyCode == Keys.F8 && e.Modifiers == Keys.Control)
+        //    {
+        //        // cridar al mateix handler del botó d'esborrar
+        //        buttonEsborrar_Click(sender, e);
+        //    }
+        //    //gestionar combinació de tecles per Afegir
+        //    if (e.KeyCode == Keys.F5 && e.Modifiers == Keys.Control)
+        //    {
+        //        // simular click sobre botó Afegir
+        //        buttonAfegir.PerformClick();
+        //    }
+        //}
+
+        private void tabControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F8 && e.Control)
+            {
+                //opció1: cridar al mateix event handler del buttonEsborrar
+                buttonEsborrar_Click(sender, e);
+                //marcar event com a gestionat
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.F5 && e.Control)
+            {
+                //opció2: generar un event de click sobre el control
+                buttonAfegir.PerformClick();
+                //marcar event com a gestionat
+                e.Handled = true;
+            }
+        }
     }
 }
