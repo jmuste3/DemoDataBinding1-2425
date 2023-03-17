@@ -51,9 +51,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBoxPrestat2 = new System.Windows.Forms.CheckBox();
             this.textBoxAny2 = new System.Windows.Forms.TextBox();
             this.textBoxAutor2 = new System.Windows.Forms.TextBox();
+            this.radioPrestat = new System.Windows.Forms.RadioButton();
+            this.radioComprat = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -183,6 +184,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.radioComprat);
+            this.tabPage3.Controls.Add(this.radioPrestat);
             this.tabPage3.Controls.Add(this.buttonAjuda);
             this.tabPage3.Controls.Add(this.labelError);
             this.tabPage3.Controls.Add(this.buttonEsborrar);
@@ -193,7 +196,6 @@
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.checkBoxPrestat2);
             this.tabPage3.Controls.Add(this.textBoxAny2);
             this.tabPage3.Controls.Add(this.textBoxAutor2);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
@@ -295,16 +297,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Titol";
             // 
-            // checkBoxPrestat2
-            // 
-            this.checkBoxPrestat2.AutoSize = true;
-            this.checkBoxPrestat2.Location = new System.Drawing.Point(17, 337);
-            this.checkBoxPrestat2.Name = "checkBoxPrestat2";
-            this.checkBoxPrestat2.Size = new System.Drawing.Size(62, 19);
-            this.checkBoxPrestat2.TabIndex = 11;
-            this.checkBoxPrestat2.Text = "prestat";
-            this.checkBoxPrestat2.UseVisualStyleBackColor = true;
-            // 
             // textBoxAny2
             // 
             this.textBoxAny2.Location = new System.Drawing.Point(16, 298);
@@ -318,6 +310,28 @@
             this.textBoxAutor2.Name = "textBoxAutor2";
             this.textBoxAutor2.Size = new System.Drawing.Size(221, 23);
             this.textBoxAutor2.TabIndex = 1;
+            // 
+            // radioPrestat
+            // 
+            this.radioPrestat.AutoSize = true;
+            this.radioPrestat.Location = new System.Drawing.Point(146, 292);
+            this.radioPrestat.Name = "radioPrestat";
+            this.radioPrestat.Size = new System.Drawing.Size(61, 19);
+            this.radioPrestat.TabIndex = 21;
+            this.radioPrestat.TabStop = true;
+            this.radioPrestat.Text = "prestat";
+            this.radioPrestat.UseVisualStyleBackColor = true;
+            // 
+            // radioComprat
+            // 
+            this.radioComprat.AutoSize = true;
+            this.radioComprat.Location = new System.Drawing.Point(146, 317);
+            this.radioComprat.Name = "radioComprat";
+            this.radioComprat.Size = new System.Drawing.Size(70, 19);
+            this.radioComprat.TabIndex = 22;
+            this.radioComprat.TabStop = true;
+            this.radioComprat.Text = "comprat";
+            this.radioComprat.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -362,12 +376,13 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private CheckBox checkBoxPrestat2;
         private TextBox textBoxAny2;
         private TextBox textBoxAutor2;
         private Button buttonEsborrar;
         private Button buttonAfegir;
         private Label labelError;
         private Button buttonAjuda;
+        private RadioButton radioComprat;
+        private RadioButton radioPrestat;
     }
 }

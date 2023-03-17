@@ -12,8 +12,26 @@ namespace DemoDataBinding1
         public string Titol { get; set; }
         public string Autor { get; set; }
         public int Any { get; set; }
-        public bool Prestat { get; set; }
-
+        private bool _Prestat { get; set; }
+        private bool _Comprat { get; set; }
+        public bool Prestat
+        {
+            get => _Prestat;
+            set
+            {
+                _Prestat = value;
+                _Comprat = !value;
+            }
+        }
+        public bool Comprat
+        {
+            get => _Comprat;
+            set
+            {
+                _Comprat = !value;
+                _Prestat = value;
+            }
+        }
         //constructor
         public Llibre(string titol, string autor, int any, bool prestat)
         {

@@ -44,7 +44,9 @@ namespace DemoDataBinding1
             //
             textBoxAny2.DataBindings.Add("Text", bs, "Any");
             //
-            checkBoxPrestat2.DataBindings.Add("Checked", bs, "Prestat");
+            //checkBoxPrestat2.DataBindings.Add("Checked", bs, "Prestat");
+            radioPrestat.DataBindings.Add("Checked", bs, "Prestat");
+            radioComprat.DataBindings.Add("Checked", bs, "Comprat");
 
             //ocultar msg error
             labelError.Visible = false;
