@@ -17,6 +17,7 @@ namespace DemoDataBinding1
         public bool Prestat
         {
             get => _Prestat;
+            //evitar escritures recursives en actualitzar una propietat: s'escriu a les propietats privades
             set
             {
                 _Prestat = value;

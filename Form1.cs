@@ -13,7 +13,7 @@ namespace DemoDataBinding1
             Llibre llibre3 = new Llibre("1984", "George Orwell", 1949, true);
 
             //afegir els llibres a la llista "llibres"
-            List<Llibre> llibres= new List<Llibre>();
+            List<Llibre> llibres = new List<Llibre>();
             llibres.Add(llibre1);
             llibres.Add(llibre2);
             llibres.Add(llibre3);
@@ -23,7 +23,7 @@ namespace DemoDataBinding1
 
             //binding exemple 3
             bs = new BindingSource();
-            bs.DataSource= llibres;
+            bs.DataSource = llibres;
             ////combobox
             //comboBoxLlibre.DataSource= bs;
             //comboBoxLlibre.DisplayMember= "Titol";
@@ -65,7 +65,7 @@ namespace DemoDataBinding1
         //    get { return bs; }
         //}
 
-    private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             //exemple 1
             label1.DataBindings.Add("Text", textBox1, "Text");
@@ -152,6 +152,11 @@ namespace DemoDataBinding1
                 //marcar event com a gestionat
                 e.Handled = true;
             }
+        }
+
+        private void buttonAjuda_Click(object sender, EventArgs e)
+        {
+            //nop
         }
     }
 }
